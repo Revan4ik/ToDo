@@ -29,6 +29,10 @@ body {
     margin: 20px;
     font-size: 45px;
 }
+.nameofuser {
+    color: white;
+    margin-left: 20px;
+}
 button{
     color: black;
 }
@@ -48,7 +52,7 @@ button{
 }
 .titlelist{
     color: white;
-    margin-left: 30px;
+    margin-left: 25px;
 }
 .todolist_input {
     padding: 15px;

@@ -9,7 +9,7 @@ nameuser = todolist.querySelector(".nameofuser"),
 todolist_items = todolist.querySelector(".todolist_items"),
 clearlist = todolist.querySelector(".clearlist")
 
-username = JSON.parse(sessionStorage.getItem('username'))
+username = JSON.parse(sessionStorage.getItem('user'))
 
 tasks = JSON.parse(sessionStorage.getItem('tasks'))
 
@@ -44,7 +44,10 @@ if (el.done) {
 registration_button.addEventListener("click", function () {
 registration.style.visibility = "hidden"
 todolist.style.visibility = "visible"
-
+sessionStorage.setItem('user', JSON.stringify(registration_input.value))
+let username = JSON.parse(sessionStorage.getItem('user')
+)
+nameuser.innerHTML = `Greetings ${username} !`
 if (!username) {
     username = [{ name: `Guest` }]
 }
@@ -58,6 +61,12 @@ if (!input.value) {
 tasks.push({
     content: input.value,
     done: false,
+})
+
+clearlist.addEventListener("click", function () {
+todolist_items.innerHTML = null
+sessionStorage.setItem("tasks", JSON.stringify([]))
+tasks = []
 })
 
 sessionStorage.setItem('tasks', JSON.stringify(tasks))
@@ -80,10 +89,4 @@ tasks.forEach(el => {
 
     }
 });
-})
-
-clearlist.addEventListener("click", function () {
-todolist_items.innerHTML = null
-sessionStorage.setItem("tasks", JSON.stringify([]))
-tasks = []
 })
