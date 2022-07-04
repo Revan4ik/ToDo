@@ -74,15 +74,23 @@ todolist_items.innerHTML = null
 tasks.forEach(el => {
     let li = document.createElement("li"),
         done = document.createElement("button")
-    done.type = "sumbit"
-    todolist_items.appendChild(li)
+        div = document.createElement("div")
+        div.className = "listToDo"
+        done.type = "sumbit"
+        done.className = "btndone"
+        done.innerHTML = "Done"
+    todolist_items.appendChild(div)
+    div.appendChild(li)
+    div.appendChild(done)
     if (el.done) {
         li.innerHTML = el.content
         li.className = "donetask"
+        done.style.display = "none"
     } else {
         li.innerHTML = el.content
-        li.addEventListener("click", function () {
+        done.addEventListener("click", function () {
             li.className = "donetask"
+            done.style.display = "none"
             el.done = true
             sessionStorage.setItem("tasks", JSON.stringify(tasks))
         })
