@@ -1,0 +1,84 @@
+
+html,
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: rgb(116, 117, 116);
+}
+
+.reg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title {
+    color: white;
+    margin: 10px;
+    font-size: 45px;
+}
+.submit1{
+    margin-top: 10px;
+}
+.nameuser {
+    color: white;
+    margin: 20px;
+    font-size: 45px;
+}
+button{
+    color: black;
+}
+.input1{
+    padding: 10px;
+}
+.submit1{
+    padding: 10px;
+}
+.todolist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    visibility: hidden;
+}
+.titlelist{
+    color: white;
+    margin-left: 30px;
+}
+.todolist_input {
+    padding: 15px;
+    display: flex;
+    align-content: space-around;
+    flex-direction: column;
+    border: 1px solid gold;
+}
+
+.todolist_text {
+    margin: 20px;
+}
+
+.todolist_add {
+    margin-top: 10px;
+}
+
+.nameofuser {
+    margin-top: 10px;
+}
+
+.clearlist {
+    margin-top: 10px;
+}
+
+.donetask {
+    text-decoration: line-through;
+}
+
+li {
+    color: white;
+    width: 100px;
+}
