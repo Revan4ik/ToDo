@@ -83,7 +83,9 @@ button{
 .donetask {
     text-decoration: line-through;
 }
-
+.btndone{
+    margin-left: 5px;
+}
 li {
     color: white;
 }
